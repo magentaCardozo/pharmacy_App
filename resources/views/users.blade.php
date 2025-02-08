@@ -7,14 +7,14 @@
 
 @push('page-header')
 <div class="col-sm-7 col-auto">
-	<h3 class="page-title">User</h3>
+	<h3 class="page-title">Utilisateur</h3>
 	<ul class="breadcrumb">
 		<li class="breadcrumb-item"><a href="{{route('dashboard')}}">Accueil</a></li>
-		<li class="breadcrumb-item active">Users</li>
+		<li class="breadcrumb-item active">Utilisteurs</li>
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="#add_user" data-toggle="modal" class="btn btn-primary float-right mt-2">Add User</a>
+	<a href="#add_user" data-toggle="modal" class="btn btn-primary float-right mt-2">Ajouter un Utilisateur</a>
 </div>
 
 @endpush
@@ -29,10 +29,10 @@
 					<table id="datatable-export" class=" table table-striped table-bordered table-hover table-center mb-0">
 						<thead>
 							<tr style="boder:1px solid black;">
-								<th>Name</th>
+								<th>Nom</th>
 								<th>Email</th>
-								<th>Role</th>
-								<th>Created date</th>
+								<th>Rôle</th>
+								<th>Date de creation</th>
 								<th class="text-center action-btn">Actions</th>
 							</tr>
 						</thead>
@@ -64,10 +64,10 @@
 								<td class="text-center">
 									<div class="actions">
 										<a data-id="{{$user->id}}" data-name="{{$user->name}}" data-email="{{$user->email}}" class="btn btn-sm bg-success-light editbtn" id="edit-user" data-toggle="modal" href="javascript:void(0)">
-											<i class="fe fe-pencil"></i> Edit
+											<i class="fe fe-pencil"></i> Modifier
 										</a>
 										<a data-id="{{$user->id}}" href="javascript:void(0);" class="btn btn-sm bg-danger-light deletebtn" data-toggle="modal">
-											<i class="fe fe-trash"></i> Delete
+											<i class="fe fe-trash"></i> Supprimer
 										</a>
 									</div>
 								</td>
@@ -86,7 +86,7 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Add User</h5>
+				<h5 class="modal-title">Ajouter un Utilisateur</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -97,7 +97,7 @@
 					<div class="row form-row">
 						<div class="col-12">
 							<div class="form-group">
-								<label>Full Name</label>
+								<label>Nom complet</label>
 								<input type="text" name="name" class="form-control" placeholder="John Doe">
 							</div>
 						</div>
@@ -109,7 +109,7 @@
 						</div>
 						<div class="col-12">
 							<div class="form-group">
-								<label>Role</label>
+								<label>Rôle</label>
 								<div class="form-group">
 									<select class="select2 form-select form-control" name="role">
 										@foreach ($roles as $role)
@@ -121,7 +121,7 @@
 						</div>
 						<div class="col-12">
 							<div class="form-group">
-								<label>Picture</label>
+								<label>Photo</label>
 								<input type="file" name="avatar">
 							</div>
 						</div>
@@ -129,20 +129,20 @@
 							<div class="row">
 								<div class="col-6">
 									<div class="form-group">
-										<label>Password</label>
+										<label>Mot de passe</label>
 										<input type="password" name="password" class="form-control">
 									</div>
 								</div>
 								<div class="col-6">
 									<div class="form-group">
-										<label>Confirm Password</label>
+										<label>Confirmer le mot de passe</label>
 										<input type="password" name="password_confirmation" class="form-control">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>
@@ -155,7 +155,7 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Edit User</h5>
+				<h5 class="modal-title">Modifier l'utilisateur</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -168,7 +168,7 @@
 						<input type="hidden" name="id" id="edit_id">
 						<div class="col-12">
 							<div class="form-group">
-								<label>Full Name</label>
+								<label>Nom complet</label>
 								<input type="text" name="name" class="form-control edit_name" placeholder="John Doe">
 							</div>
 						</div>
@@ -194,7 +194,7 @@
 						@endcan
 						<div class="col-12">
 							<div class="form-group">
-								<label for="avatar">User Picture</label>
+								<label for="avatar">Photo de l'utilisateur</label>
 								<input type="file" name="avatar" id="avatar">
 							</div>
 						</div>
@@ -202,20 +202,20 @@
 							<div class="row">
 								<div class="col-6">
 									<div class="form-group">
-										<label>Password</label>
+										<label>Mot de passe</label>
 										<input type="password" name="password" class="form-control">
 									</div>
 								</div>
 								<div class="col-6">
 									<div class="form-group">
-										<label>Confirm Password</label>
+										<label>Confier le mot de passe</label>
 										<input type="password" name="password_confirmation" class="form-control">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+					<button type="submit" class="btn btn-primary btn-block">Enregister</button>
 				</form>
 			</div>
 		</div>

@@ -11,7 +11,7 @@ class BackupController extends Controller
     public function index(){
         Artisan::call('backup:run --disable-notifications');
         $notification = [
-            'message'=>"Backup has been made",
+            'message'=>"La sauvegarde a été effectuée",
             'alert-type'=>'success',
         ];
         return redirect()->route('dashboard')->with($notification);
@@ -20,7 +20,7 @@ class BackupController extends Controller
     public function database(){
         Artisan::call('backup:run --only-db --disable-notifications');
         $notification = [
-            'message'=>"Database has been backed up",
+            'message'=>"La base de données a été mise à jour",
             'alert-type'=>'success',
         ];
         return redirect()->route('dashboard')->with($notification);

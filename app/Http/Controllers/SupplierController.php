@@ -15,7 +15,7 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $title ="Suppliers";
+        $title ="Fournisseurs";
         $suppliers = Supplier::get();
         return view('suppliers',compact('title','suppliers'));
     }
@@ -27,7 +27,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        $title = "add supplier";
+        $title = "Ajouter Fournisseur";
         $products = Product::get();
         return view('add-supplier',compact(
             'title','products'
@@ -61,7 +61,7 @@ class SupplierController extends Controller
             'description'=>$request->description,
         ]);
         $notification = array(
-            'message'=>"Supplier has been added",
+            'message'=>"Le fournisseur a été ajouté",
             'alert-type'=>'success',
         );
         return redirect()->route('suppliers')->with($notification);
@@ -75,7 +75,7 @@ class SupplierController extends Controller
      */
     public function show(Request $request,$id)
     {
-        $title = "edit Supplier";
+        $title = "Supprimer un Fournisseur";
         $products = Product::get();
         $supplier = Supplier::find($id);
         return view('edit-supplier',compact(
@@ -104,7 +104,7 @@ class SupplierController extends Controller
 
         $supplier->update($request->all());
         $notification = array(
-            'message'=>"Supplier has been updated",
+            'message'=>"Le fournisseur a été mis à jour",
             'alert-type'=>'success',
         );
         return redirect()->route('suppliers')->with($notification);
@@ -121,7 +121,7 @@ class SupplierController extends Controller
         $supplier = Supplier::find($request->id);
         $supplier->delete();
         $notification = array(
-            'message'=>"Supplier has been deleted",
+            'message'=>"Le fournisseur a été supprimé",
             'alert-type'=>'success',
         );
         return back()->with($notification);

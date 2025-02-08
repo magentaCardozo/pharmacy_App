@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="{{route('add-purchase')}}" class="btn btn-primary float-right mt-2">Add New</a>
+	<a href="{{route('add-purchase')}}" class="btn btn-primary float-right mt-2">Ajouter</a>
 </div>
 @endpush
 
@@ -29,12 +29,12 @@
 					<table id="datatable-export" class="table table-hover table-center mb-0">
 						<thead>
 							<tr>
-								<th>Medicine Name</th>
-								<th>Medicine Category</th>
-								<th>Purchase Price</th>
-								<th>Quantity</th>
-								<th>Supplier</th>
-								<th>Expire Date</th>
+								<th>Nom Produit</th>
+								<th>Catégorie Produit</th>
+								<th>Prix d'achat</th>
+								<th>Quantité</th>
+								<th>Fournisseur</th>
+								<th>Date d'expiration</th>
 								<th class="action-btn">Action</th>
 							</tr>
 						</thead>
@@ -59,10 +59,10 @@
 								<td>
 									<div class="actions">
 										<a class="btn btn-sm bg-success-light" href="{{route('edit-purchase',$purchase)}}">
-											<i class="fe fe-pencil"></i> Edit
+											<i class="fe fe-pencil"></i> Modifier
 										</a>
 										<a data-id="{{$purchase->id}}" href="javascript:void(0);" class="btn btn-sm bg-danger-light deletebtn" data-toggle="modal">
-											<i class="fe fe-trash"></i> Delete
+											<i class="fe fe-trash"></i> Supprimer
 										</a>
 									</div>
 								</td>

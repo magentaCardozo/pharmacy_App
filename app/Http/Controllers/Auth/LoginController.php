@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function index(){
-        $title = "login";
+        $title = "Connexion";
         return view('auth.login',compact(
             'title',
         ));
@@ -18,10 +18,13 @@ class LoginController extends Controller
         $this->validate($request ,[
             'email'=>'required|email',
             'password'=>'required',
-        ]);
+        ],
+    [
+        'password.required' => 'Le champ mot de passe est requis.',
+    ]);
        $authenticate = auth()->attempt($request->only('email','password'));
        if (!$authenticate){
-           return back()->with('login_error',"Invalid user credentials");
+           return back()->with('login_error',"Les identifiants ne correspondent pas à nos enregistrements");
        }
 
        return redirect()->route('dashboard');

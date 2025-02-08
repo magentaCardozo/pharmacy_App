@@ -32,7 +32,7 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">
-								<label>Name<span class="text-danger">*</span></label>
+								<label>Nom<span class="text-danger">*</span></label>
 								<input class="form-control" type="text" name="name">
 							</div>
 						</div>
@@ -47,12 +47,12 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">
-								<label>Phone<span class="text-danger">*</span></label>
+								<label>Téléphone<span class="text-danger">*</span></label>
 								<input class="form-control" type="text" name="phone">
 							</div>
 						</div>
 						<div class="col-lg-6">
-							<label>Company<span class="text-danger">*</span></label>
+							<label>Compagnie<span class="text-danger">*</span></label>
 							<input class="form-control" type="text" name="company">
 						</div>
 					</div>
@@ -62,12 +62,12 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">
-								<label>Address <span class="text-danger">*</span></label>
+								<label>Addresse <span class="text-danger">*</span></label>
 								<input type="text" name="address" class="form-control">
 							</div>
 						</div>
 						<div class="col-lg-6">
-							<label>Product</label>
+							<label>Produit</label>
 							<input type="text" name="product" class="form-control">
 						</div>
 					</div>
@@ -75,14 +75,14 @@
 				<div class="service-fields mb-3">
 					<div class="row">
 						<div class="col-12">
-							<label>Comment</label>
+							<label>Commentaire</label>
 							<textarea name="description" class="form-control" cols="30" rows="10"></textarea>
 						</div>
 					</div>
 				</div>
 
 				<div class="submit-section">
-					<button class="btn btn-primary submit-btn" type="submit" name="form_submit" value="submit">Submit</button>
+					<button class="btn btn-primary submit-btn" type="submit" name="form_submit" value="submit">valider</button>
 				</div>
 			</form>
 			<!-- /Add Medicine -->

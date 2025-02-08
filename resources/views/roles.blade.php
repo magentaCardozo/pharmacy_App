@@ -7,14 +7,14 @@
 
 @push('page-header')
 <div class="col-sm-7 col-auto">
-	<h3 class="page-title">Roles</h3>
+	<h3 class="page-title">Rôles</h3>
 	<ul class="breadcrumb">
 		<li class="breadcrumb-item"><a href="{{route('dashboard')}}">Accueil</a></li>
-		<li class="breadcrumb-item active">Roles</li>
+		<li class="breadcrumb-item active">Rôles</li>
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="#add_role" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Role</a>
+	<a href="#add_role" data-toggle="modal" class="btn btn-primary float-right mt-2">Ajouter Rôle</a>
 </div>
 
 @endpush
@@ -29,7 +29,7 @@
 					<table id="roles-table" class="datatable table table-striped table-bordered table-hover table-center mb-0">
 						<thead>
 							<tr style="boder:1px solid black;">
-								<th>Name</th>
+								<th>Nom</th>
 								<th>Permissions</th>
 								<th class="text-center action-btn">Actions</th>
 							</tr>
@@ -49,10 +49,10 @@
 								<td class="text-center">
 									<div class="actions">
 										<a data-id="{{$role->id}}" data-role="{{$role->name}}" data-permissions="{{$role->getAllPermissions()}}" class="btn btn-sm bg-success-light editbtn" data-toggle="modal" href="javascript:void(0)">
-											<i class="fe fe-pencil"></i> Edit
+											<i class="fe fe-pencil"></i> Modifier
 										</a>
 										<a data-id="{{$role->id}}" data-toggle="modal" href="javascript:void(0)" class="btn btn-sm bg-danger-light deletebtn">
-											<i class="fe fe-trash"></i> Delete
+											<i class="fe fe-trash"></i> Supprimer
 										</a>
 									</div>
 								</td>
@@ -71,7 +71,7 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Add Role</h5>
+				<h5 class="modal-title">Ajouter Rôle</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -82,11 +82,11 @@
 					<div class="row form-row">
 						<div class="col-12">
 							<div class="form-group">
-								<label>Role</label>
+								<label>Rôle</label>
 								<input type="text" name="role" class="form-control">
 							</div>
 							<div class="form-group">
-								<lable>Select Permissions</lable>
+								<lable>Choisir les permissions</lable>
 								<select class="select2 form-select form-control" name="permission[]" multiple="multiple">
 									@foreach ($permissions as $permission)
 										<option value="{{$permission->name}}">{{$permission->name}}</option>
@@ -95,7 +95,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>
@@ -108,7 +108,7 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Edit Role</h5>
+				<h5 class="modal-title">Modifier Rôle</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -121,11 +121,11 @@
 						<div class="col-12">
 							<input type="hidden" name="id" id="edit_id">
 							<div class="form-group">
-								<label>Role</label>
+								<label>Rôle</label>
 								<input type="text" name="role" class="form-control edit_role">
 							</div>
 							<div class="form-group">
-								<lable>Select Permissions</lable>
+								<lable>Choisir la permission</lable>
 								<select class="select2 form-select form-control edit_perms" name="permission[]" multiple="multiple">
 									@foreach ($permissions as $permission)
 										<option value="{{$permission->name}}">{{$permission->name}}</option>
@@ -135,7 +135,7 @@
 						</div>
 
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>

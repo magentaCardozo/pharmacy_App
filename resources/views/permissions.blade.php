@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="#add_permission" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Permission</a>
+	<a href="#add_permission" data-toggle="modal" class="btn btn-primary float-right mt-2">Ajouter Permission</a>
 </div>
 
 @endpush
@@ -29,8 +29,8 @@
 					<table id="perm-table" class="datatable table table-striped table-bordered table-hover table-center mb-0">
 						<thead>
 							<tr style="boder:1px solid black;">
-								<th>Name</th>
-								<th>Created date</th>
+								<th>Nom</th>
+								<th>Date de création</th>
 								<th class="text-center action-btn">Actions</th>
 							</tr>
 						</thead>
@@ -47,12 +47,12 @@
 									<div class="actions">
 										@can('update-permission')
 										<a data-id="{{$permission->id}}" data-permission="{{$permission->name}}" class="btn btn-sm bg-success-light editbtn" data-toggle="modal" href="javascript:void(0)">
-											<i class="fe fe-pencil"></i> Edit
+											<i class="fe fe-pencil"></i> Modifier
 										</a>
 										@endcan
 										@can('destroy-permission')
 										<a data-id="{{$permission->id}}" data-toggle="modal" href="javascript:void(0)" class="btn btn-sm bg-danger-light deletebtn">
-											<i class="fe fe-trash"></i> Delete
+											<i class="fe fe-trash"></i> Supprimer
 										</a>
 										@endcan
 									</div>
@@ -72,7 +72,7 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Add Permission</h5>
+				<h5 class="modal-title">Ajouter Permission</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -88,7 +88,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>
@@ -101,7 +101,7 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Edit Permission</h5>
+				<h5 class="modal-title">Modifier Permission</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -120,7 +120,7 @@
 						</div>
 
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+					<button type="submit" class="btn btn-primary btn-block">Modifier</button>
 				</form>
 			</div>
 		</div>

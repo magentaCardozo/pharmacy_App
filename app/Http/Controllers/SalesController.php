@@ -19,7 +19,7 @@ class SalesController extends Controller
      */
     public function index()
     {
-        $title = "sales";
+        $title = "Ventes";
         $products = Product::get();
         $sales = Sales::with('product')->latest()->get();
                 
@@ -66,7 +66,7 @@ class SalesController extends Controller
             ]);
 
             $notification = array(
-                'message'=>"Product has been sold",
+                'message'=>"Le produit a été vendu",
                 'alert-type'=>'success',
             );
         } 
@@ -76,7 +76,7 @@ class SalesController extends Controller
             event(new PurchaseOutStock($product));
             // end of notification 
             $notification = array(
-                'message'=>"Product is running out of stock!!!",
+                'message'=>"Le Stock du produit tend à s'épuiser!!!",
                 'alert-type'=>'danger'
             );
             
@@ -133,7 +133,7 @@ class SalesController extends Controller
             ]);
 
             $notification = array(
-                'message'=>"Product has been sold",
+                'message'=>"Le produit a été vendu",
                 'alert-type'=>'success',
             );
         }
@@ -144,14 +144,14 @@ class SalesController extends Controller
             event(new PurchaseOutStock($product));
             // end of notification 
             $notification = array(
-                'message'=>"Product is running out of stock!!!",
+                'message'=>"Le produit est tend à s'épuiser!!!",
                 'alert-type'=>'danger'
             );
             
         }
         else{
             $notification = array(
-                'message'=>"Please check purchase product quantity",
+                'message'=>"Verifier la quantité du produit achété, s'il vous plait",
                 'alert-type'=>'info',
             );
             return back()->with($notification);
@@ -169,7 +169,7 @@ class SalesController extends Controller
         $sale = Sales::find($request->id);
         $sale->delete();
         $notification = array(
-            'message'=>"Sales has been deleted",
+            'message'=>"La vente a été supprimée",
             'alert-type'=>'success'
         );
         return back()->with($notification);

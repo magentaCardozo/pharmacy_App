@@ -4923,19 +4923,19 @@ S2.define('select2/i18n/en',[],function () {
       return message;
     },
     noResults: function () {
-      return 'No results found';
+      return 'Aucun resultat correspondant';
     },
     searching: function () {
-      return 'Searching…';
+      return 'Rechhercher...';
     },
     removeAllItems: function () {
-      return 'Remove all items';
+      return 'Tout Supprimer';
     },
     removeItem: function () {
-      return 'Remove item';
+      return 'Supprimer';
     },
     search: function() {
-      return 'Search';
+      return 'Rechercher';
     }
   };
 });

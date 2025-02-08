@@ -16,7 +16,7 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-        $title = "purchases";
+        $title = "Achats";
         $purchases = Purchase::with('category')->get();
         return view('purchases',compact(
             'title','purchases'
@@ -30,7 +30,7 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        $title = "add Purhase";
+        $title = "Ajouter achat";
         $categories = Category::get();
         $suppliers = Supplier::get();
         return view('add-purchase',compact(
@@ -70,7 +70,7 @@ class PurchaseController extends Controller
             'image'=>$imageName,
         ]);
         $notifications = array(
-            'message'=>"Purchase has been added",
+            'message'=>"L'achat a été ajouté",
             'alert-type'=>'success',
         );
         return redirect()->route('purchases')->with($notifications);
@@ -84,7 +84,7 @@ class PurchaseController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $title = "Edit Purchase";
+        $title = "Modifier achat";
         $purchase = Purchase::find($id);
         $categories = Category::get();
         $suppliers = Supplier::get();
@@ -127,7 +127,7 @@ class PurchaseController extends Controller
             'image'=>$imageName,
         ]);
         $notifications = array(
-            'message'=>"Purchase has been updated",
+            'message'=>"L'achat a été mis à jour",
             'alert-type'=>'success',
         );
         return redirect()->route('purchases')->with($notifications);
@@ -144,7 +144,7 @@ class PurchaseController extends Controller
         $purchase = Purchase::find($request->id);
         $purchase->delete();
         $notification =array(
-            'message'=>"Purchase has been deleted",
+            'message'=>"L'achat a été supprimé",
             'alert-type'=>'success'
         );
         return back()->with($notification);

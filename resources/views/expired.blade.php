@@ -26,12 +26,12 @@
 					<table id="datatable-export" class="table table-striped table-bordered table-hover table-center mb-0">
 						<thead>
 							<tr>
-								<th>Brand Name</th>
-								<th>Category</th>
-								<th>Price</th>
-								<th>Quantity</th>
-								<th>Discount</th>
-								<th>Expire</th>
+								<th>Nom Produit</th>
+								<th>Catégorie</th>
+								<th>Prix</th>
+								<th>Quantité</th>
+								<th>Remise</th>
+								<th>Expiré</th>
 								<th class="action-btn">Action</th>
 							</tr>
 						</thead>
@@ -56,10 +56,10 @@
 								<td>
 									<div class="actions">
 										<a class="btn btn-sm bg-success-light" href="{{route('edit-product',$product)}}">
-											<i class="fe fe-pencil"></i> Edit
+											<i class="fe fe-pencil"></i> Modifier
 										</a>
 										<a data-id="{{$product->id}}" href="javascript:void(0);" class="btn btn-sm bg-danger-light deletebtn" data-toggle="modal">
-											<i class="fe fe-trash"></i> Delete
+											<i class="fe fe-trash"></i> Supprimer
 										</a>
 									</div>
 								</td>

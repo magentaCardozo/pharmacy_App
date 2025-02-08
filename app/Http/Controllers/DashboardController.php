@@ -15,7 +15,7 @@ use App\Events\ProductReachedLowStock;
 class DashboardController extends Controller
 {
     public function index(){   
-        $title = "dashboard";
+        $title = "Accueil";
         
         $total_purchases = Purchase::where('expiry_date','=',Carbon::now())->count();
         $total_categories = Category::count();

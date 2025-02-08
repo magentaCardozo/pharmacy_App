@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ForgotPasswordController extends Controller
 {
     public function index(){
-        $title = "forgot password";
+        $title = "Mot de passe oublié";
         return view('auth.forgot-password',compact(
             'title'
         ));

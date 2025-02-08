@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $title = "users";
+        $title = "Utilisateurs";
         $users  = User::with('roles')->get();
         $roles = Role::get();
         return view('users',compact(
@@ -52,7 +52,7 @@ class UserController extends Controller
         ]);
         $user->assignRole($request->role);
         $notification =array(
-            'message'=>"User has been added!!!",
+            'message'=>"L'utilisateur a été ajouté!!!",
             'alert-type'=>'success'
         );
         return back()->with($notification);
@@ -65,7 +65,7 @@ class UserController extends Controller
      */
     public function profile()
     {
-        $title = "profile";
+        $title = "Profil";
         $roles = Role::get();
         return view('profile',compact(
             'title','roles'
@@ -97,7 +97,7 @@ class UserController extends Controller
             'avatar'=>$imageName,
         ]);
         $notification =array(
-            'message'=>"User profile has been updated !!!",
+            'message'=>"Le profil de l'utilisateur a été mis à jour !!!",
             'alert-type'=>'success'
         );
         return back()->with($notification);
@@ -119,14 +119,14 @@ class UserController extends Controller
         if (password_verify($request->old_password,auth()->user()->password)){
             auth()->user()->update(['password'=>Hash::make($request->password)]);
             $notification = array(
-                'message'=>"User password updated successfully!!!",
+                'message'=>"Le mot de passe de l' utilisateur a été mis à jour avec succès!!!",
                 'alert-type'=>'success'
             );
             $logout = auth()->logout();
             return back()->with($notification,$logout);
         }else{
             $notification = array(
-                'message'=>"Old Password do not match!!!",
+                'message'=>"Ancien mot de passe, ne correspond pas!!!",
                 'alert-type'=>'danger'
             );
             return back()->with($notification);
@@ -173,7 +173,7 @@ class UserController extends Controller
         ]);
         $user->assignRole($request->role);
         $notification =array(
-            'message'=>"User has been updated!!!",
+            'message'=>"L'utilisateur a été mis à jour!!!",
             'alert-type'=>'success'
         );
         return back()->with($notification);
@@ -190,14 +190,14 @@ class UserController extends Controller
         $user = User::find($request->id);
         if($user->hasRole('super-admin')){
             $notification=array(
-                'message'=>"Super admin cannot be deleted",
+                'message'=>"Le Super administrateur ne peut pas être supprimé",
                 'alert-type'=>'warning',
             );
             return back()->with($notification);
         }
         $user->delete();
         $notification=array(
-            'message'=>"User has been deleted",
+            'message'=>"L'utilisateur a été supprimé",
             'alert-type'=>'success',
         );
         return back()->with($notification);

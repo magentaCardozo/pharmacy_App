@@ -35,7 +35,7 @@
 			<div class="dropdown-menu notifications">
 				<div class="topnav-dropdown-header">
 					<span class="notification-title">Notifications</span>
-					<a href="{{route('mark-as-read')}}" class="clear-noti">Mark All As Read </a>
+					<a href="{{route('mark-as-read')}}" class="clear-noti">Tout marquer comme lu </a>
 				</div>
 				<div class="noti-content">
 					<ul class="notification-list">
@@ -47,7 +47,7 @@
 											<img class="avatar-img rounded-circle" alt="Product image" src="{{asset('storage/purchases/'.$notification['image'])}}">
 										</span>
 										<div class="media-body">
-											<h6 class="text-danger">Stock Alert</h6>
+											<h6 class="text-danger">Alerte du Stock</h6>
 											<p class="noti-details">
 												<span class="noti-title">{{$notification->data['product_name']}} is only {{$notification->data['quantity']}} left.</span>
 												<span>Please update the purchase quantity </span>
@@ -62,7 +62,7 @@
 					</ul>
 				</div>
 				<div class="topnav-dropdown-footer">
-					<a href="#">View all Notifications</a>
+					<a href="#">Voir toutes les notifications</a>
 				</div>
 			</div>
 		</li>
@@ -83,15 +83,15 @@
 					</div>
 				</div>
 				
-				<a class="dropdown-item" href="{{route('profile')}}">My Profile</a>
-				@can('view-settings')<a class="dropdown-item" href="{{route('settings')}}">Settings</a>@endcan
+				<a class="dropdown-item" href="{{route('profile')}}">Mon profil</a>
+				@can('view-settings')<a class="dropdown-item" href="{{route('settings')}}">Paramètre</a>@endcan
 				@can('backup-app')
-				<a class="dropdown-item" href="{{route('backup-app')}}">Backup App</a>
+				<a class="dropdown-item" href="{{route('backup-app')}}">Sauvegarder l'Application</a>
 				@endcan
 				@can('backup-db')
-				<a class="dropdown-item" href="{{route('backup-db')}}">Backup Database</a>
+				<a class="dropdown-item" href="{{route('backup-db')}}">Sauvegarder La Base de données</a>
 				@endcan
-				<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+				<a class="dropdown-item" href="{{route('logout')}}">Se Déconnecter</a>
 			</div>
 		</li>
 		<!-- /User Menu -->

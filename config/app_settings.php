@@ -5,7 +5,7 @@ return [
     // All the sections for the settings page
     'sections' => [
         'app' => [
-            'title' => 'General Settings',
+            'title' => 'Paramètre général',
             'descriptions' => '', // (optional)
             'icon' => 'fa fa-cog', // (optional)
 
@@ -13,31 +13,31 @@ return [
                 [
                     'name' => 'app_name', // unique key for setting
                     'type' => 'text', // type of input can be text, number, textarea, select, boolean, checkbox etc.
-                    'label' => 'App Name', // label for input
+                    'label' => 'Nom de l\'appli', // label for input
                     // optional properties
                     'placeholder' => 'Application Name', // placeholder for input
                     'class' => 'form-control', // override global input_class
                     'style' => '', // any inline styles
                     'rules' => 'required|min:2|max:20', // validation rules for this input
                     'value' => config('app.name'), // any default value
-                    'hint' => 'You can set the app name here' // help block text for input
+                    'hint' => 'Mettez le nom de l\'application ici' // help block text for input
                 ],
                 [
                     'name' => 'app_currency',
                     'type' => 'text',
-                    'label' => 'App Currency',
+                    'label' => 'Money de l\'appli',
                     'placeholder' => 'Application Currency',
                     'class' => 'form-control',
                     'style' => '', // any inline styles
                     'rules' => 'required|max:10', // validation rules for this input
                     'value' => '$', // any default value
-                    'hint' => 'Use your currency symbol like $',
+                    'hint' => 'Utiliser la money telle que $',
                 ],
                 [
                     'name' => 'logo',
                     'type' => 'image',
-                    'label' => 'Upload logo',
-                    'hint' => 'Recommended image size is 150px x 150px',
+                    'label' => 'Choisir le logo',
+                    'hint' => 'La taille d\'image recommandée est  150px x 150px',
                     'rules' => 'image|max:500',
                     'disk' => 'public', // which disk you want to upload
                     'path' => 'logos', // path on the disk,
@@ -48,8 +48,8 @@ return [
                 [
                     'name' => 'favicon',
                     'type' => 'image',
-                    'label' => 'Upload favicon',
-                    'hint' => 'Recommended image size is 16px x 16px or 32px x 32px',
+                    'label' => 'choisir le favicon',
+                    'hint' => 'La taille d\'image recommandée est  16px x 16px or 32px x 32px',
                     'rules' => 'image|max:500',
                     'disk' => 'public', // which disk you want to upload
                     'path' => 'logos', // path on the disk,
@@ -59,7 +59,7 @@ return [
             ]
         ],
         'email' => [
-            'title' => 'Email Settings',
+            'title' => 'Paramètre Email',
             'descriptions' => '',
             'icon' => 'fa fa-envelope',
 
@@ -67,15 +67,15 @@ return [
                 [
                     'name' => 'from_email',
                     'type' => 'email',
-                    'label' => 'From Email',
-                    'placeholder' => 'Application from email',
+                    'label' => 'Email',
+                    'placeholder' => 'Soumission depuis le mail',
                     'rules' => 'required|email',
                 ],
                 [
                     'name' => 'from_name',
                     'type' => 'text',
-                    'label' => 'Email from Name',
-                    'placeholder' => 'Email from Name',
+                    'label' => 'Nom' ,
+                    'placeholder' => 'Nom',
                 ]
             ]
         ]
@@ -106,7 +106,7 @@ return [
     'input_error_feedback_class' => 'text-danger',
 
     // Submit button
-    'submit_btn_text' => 'Save Settings',
+    'submit_btn_text' => 'Enregistrer le paramètre',
     'submit_success_message' => 'Settings has been saved.',
 
     // Remove any setting which declaration removed later from sections

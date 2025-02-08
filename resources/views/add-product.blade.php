@@ -7,10 +7,10 @@
 
 @push('page-header')
 <div class="col-sm-12">
-	<h3 class="page-title">Add Product</h3>
+	<h3 class="page-title">Ajouter Produit</h3>
 	<ul class="breadcrumb">
 		<li class="breadcrumb-item"><a href="{{route('dashboard')}}">Accueil</a></li>
-		<li class="breadcrumb-item active">Add Product</li>
+		<li class="breadcrumb-item active">Ajouter Produit</li>
 	</ul>
 </div>
 @endpush
@@ -31,7 +31,7 @@
 
 						<div class="col-lg-12">
 							<div class="form-group">
-								<label>Product <span class="text-danger">*</span></label>
+								<label>Produit <span class="text-danger">*</span></label>
 								<select class="select2 form-select form-control" name="product">
 									@foreach ($products as $product)
 										<option value="{{$product->id}}">{{$product->name}}</option>
@@ -46,14 +46,14 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">
-								<label>Selling Price<span class="text-danger">*</span></label>
+								<label>Prix de vente<span class="text-danger">*</span></label>
 								<input class="form-control" type="text" name="price" value="{{old('price')}}">
 							</div>
 						</div>
 
 						<div class="col-lg-6">
 							<div class="form-group">
-								<label>Discount (%)<span class="text-danger">*</span></label>
+								<label>Remise (%)<span class="text-danger">*</span></label>
 								<input class="form-control" type="text" name="discount" value="0">
 							</div>
 						</div>
@@ -77,7 +77,7 @@
 
 
 				<div class="submit-section">
-					<button class="btn btn-primary submit-btn" type="submit" name="form_submit" value="submit">Submit</button>
+					<button class="btn btn-primary submit-btn" type="submit" name="form_submit" value="submit">Valider</button>
 				</div>
 			</form>
 			<!-- /Add Medicine -->

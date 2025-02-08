@@ -7,14 +7,14 @@
 
 @push('page-header')
 <div class="col-sm-7 col-auto">
-	<h3 class="page-title">Supplier</h3>
+	<h3 class="page-title">Fournisseur</h3>
 	<ul class="breadcrumb">
 		<li class="breadcrumb-item"><a href="{{route('dashboard')}}">Accueil</a></li>
-		<li class="breadcrumb-item active">Supplier</li>
+		<li class="breadcrumb-item active">Fournisseur</li>
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="{{route('add-supplier')}}" class="btn btn-primary float-right mt-2">Add New</a>
+	<a href="{{route('add-supplier')}}" class="btn btn-primary float-right mt-2">Ajouter</a>
 </div>
 @endpush
 
@@ -29,12 +29,12 @@
 					<table id="datatable-export" class="table table-hover table-center mb-0">
 						<thead>
 							<tr>
-								<th>Product</th>
-								<th>Name</th>
-								<th>Phone</th>
+								<th>Produit</th>
+								<th>Nom</th>
+								<th>Télephone</th>
 								<th>Email</th>
-								<th>Address</th>
-								<th>Company</th>
+								<th>Addresse</th>
+								<th>Compagnie</th>
 								<th class="action-btn">Action</th>
 							</tr>
 						</thead>
@@ -52,10 +52,10 @@
 								<td>
 									<div class="actions">
 										<a class="btn btn-sm bg-success-light" href="{{route('edit-supplier',$supplier)}}">
-											<i class="fe fe-pencil"></i> Edit
+											<i class="fe fe-pencil"></i> Modifier
 										</a>
 										<a data-id="{{$supplier->id}}" href="javascript:void(0);" class="btn btn-sm bg-danger-light deletebtn" data-toggle="modal">
-											<i class="fe fe-trash"></i> Delete
+											<i class="fe fe-trash"></i> Supprimer
 										</a>
 									</div>
 								</td>

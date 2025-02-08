@@ -10,11 +10,11 @@
 	<h3 class="page-title">Products</h3>
 	<ul class="breadcrumb">
 		<li class="breadcrumb-item"><a href="{{route('dashboard')}}">Accueil</a></li>
-		<li class="breadcrumb-item active">Products</li>
+		<li class="breadcrumb-item active">Produits</li>
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="{{route('add-product')}}" class="btn btn-primary float-right mt-2">Add New</a>
+	<a href="{{route('add-product')}}" class="btn btn-primary float-right mt-2">Ajouter</a>
 </div>
 @endpush
 
@@ -30,7 +30,7 @@
 						<thead>
 							<tr>
 								<th>Nom Produit</th>
-								<th>Categorie</th>
+								<th>Catégorie</th>
 								<th>Prix</th>
 								<th>Quantité</th>
 								<th>Redution</th>

@@ -21,7 +21,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $title = "products";
+        $title = "Produits";
         $products = Product::with('purchase')->get();
     
         return view('products',compact(
@@ -30,7 +30,7 @@ class ProductController extends Controller
     }
 
     public function create(){
-        $title= "Add Product";
+        $title= "Ajouter Produit";
         $products = Purchase::get();
         return view('add-product',compact(
             'title','products',
@@ -44,7 +44,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function expired(){
-        $title = "expired Products";
+        $title = "Produits expirés";
         $products = Purchase::whereDate('expiry_date', '=', Carbon::now())->get();
         
         return view('expired',compact(
@@ -58,7 +58,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function outstock(){
-        $title = "outstocked Products";
+        $title = "Rupture de Stock";
         $products = Purchase::where('quantity', '<=', 0)->get();
         $product = Purchase::where('quantity', '<=', 0)->first();
         // auth()->user()->notify(new StockAlert($product));
@@ -94,7 +94,7 @@ class ProductController extends Controller
             'description'=>$request->description,
         ]);
         $notification=array(
-            'message'=>"Product has been added",
+            'message'=>"Le produit a été ajouté",
             'alert-type'=>'success',
         );
         return redirect()->route('products')->with($notification);
@@ -109,7 +109,7 @@ class ProductController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $title = "Edit Product";
+        $title = "Modifier Produit";
         $product = Product::find($id);
         $purchased_products = Purchase::get();
         return view('edit-product',compact(
@@ -144,7 +144,7 @@ class ProductController extends Controller
             'description'=>$request->description,
         ]);
         $notification=array(
-            'message'=>"Product has been updated",
+            'message'=>"Le produit a été mis à jour",
             'alert-type'=>'success',
         );
         return redirect()->route('products')->with($notification);
@@ -161,7 +161,7 @@ class ProductController extends Controller
         $product = Product::find($request->id);
         $product->delete();
         $notification = array(
-            'message'=>"Product has been deleted",
+            'message'=>"Le produit a été supprimé",
             'alert-type'=>'success',
         );
         return back()->with($notification);

@@ -47,7 +47,7 @@ class PermissionController extends Controller
             $permission->assignRole('super-admin');
         }
         $notification = array(
-            'message'=>"Permission Created Successfully!!",
+            'message'=>"La permission a été créée avec succès!!",
             'alert-type'=>"success"
         );
         return back()->with($notification);
@@ -98,7 +98,7 @@ class PermissionController extends Controller
         $permission = Permission::find($request->id);
         $permission->delete();
         $notification = array(
-            'message'=>"Permission has been deleted",
+            'message'=>"La permission a été supprimée",
             'alert-type'=>'success',
         );
         return back()->with($notification);

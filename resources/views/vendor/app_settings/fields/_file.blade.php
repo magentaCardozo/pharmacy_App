@@ -14,7 +14,7 @@
     @if( $filePath = \setting($field['name']))
         <label class="text-danger" style="float:right; font-size: 0.8rem">
             <input type="checkbox" value="1" name="remove_file_{{$field['name']}}">
-            {{ Arr::get($field, 'remove_label', 'Remove') }}
+            {{ Arr::get($field, 'remove_label', 'Supprimer') }}
         </label>
         @php $fileUrl = \Storage::disk(Arr::get($field, 'disk', 'public'))->url($filePath) @endphp
 
