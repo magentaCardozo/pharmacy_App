@@ -77,7 +77,7 @@
 
 
 				<div class="submit-section">
-					<button class="btn btn-primary submit-btn" type="submit" name="form_submit" value="submit">Valider</button>
+					<button class="btn btn-success submit-btn" type="submit" name="form_submit" value="submit">Valider</button>
 				</div>
 			</form>
 			<!-- /Add Medicine -->

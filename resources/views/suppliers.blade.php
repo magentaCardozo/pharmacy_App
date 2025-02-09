@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="{{route('add-supplier')}}" class="btn btn-primary float-right mt-2">Ajouter</a>
+	<a href="{{route('add-supplier')}}" class="btn btn-success float-right mt-2">Ajouter</a>
 </div>
 @endpush
 

@@ -31,8 +31,8 @@
             <div class="login-wrapper">
             	<div class="container">
                 	<div class="loginbox">
-                    	<div class="login-left">
-							<img class="img-fluid" src="@if(!empty(AppSettings::get('logo'))) {{asset('storage/'.AppSettings::get('logo'))}} @else{{asset('assets/img/logo.png')}} @endif" alt="Logo">
+                    	<div class="left-new" >
+							<img class="img w-100 h-100" src="@if(!empty(AppSettings::get('logo'))) {{asset('storage/'.AppSettings::get('logo'))}} @else{{asset('assets/img/logoLogin.jpg')}} @endif" alt="Pas logo">
                         </div>
                         <div class="login-right">
 							<div class="login-right-wrap">

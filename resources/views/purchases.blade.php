@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="{{route('add-purchase')}}" class="btn btn-primary float-right mt-2">Ajouter</a>
+	<a href="{{route('add-purchase')}}" class="btn btn-success float-right mt-2">Ajouter</a>
 </div>
 @endpush
 
@@ -52,7 +52,7 @@
 									</h2>
 								</td>
 								<td>{{$purchase->category->name}}</td>
-								<td>{{AppSettings::get('app_currency', '$')}}{{$purchase->price}}</td>
+								<td>{{$purchase->price}}{{AppSettings::get('app_currency', '$')}}</td>
 								<td>{{$purchase->quantity}}</td>
 								<td>{{$purchase->supplier->name}}</td>
 								<td>{{date_format(date_create($purchase->expiry_date),"d M, Y")}}</td>

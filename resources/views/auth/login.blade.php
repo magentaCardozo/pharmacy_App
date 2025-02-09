@@ -71,7 +71,7 @@
         <input class="form-control" name="password" type="password" placeholder="Mot de passe">
     </div>
     <div class="form-group">
-        <button class="btn btn-primary btn-block" type="submit">Connexion</button>
+        <button class="btn btn-success btn-block" type="submit">Connexion</button>
     </div>
 </form>
 <!-- /Form -->

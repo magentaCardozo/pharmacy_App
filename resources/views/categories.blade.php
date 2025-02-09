@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="#add_categories" data-toggle="modal" class="btn btn-primary float-right mt-2">Ajouter Catégorie</a>
+	<a href="#add_categories" data-toggle="modal" class="btn btn-success float-right mt-2">Ajouter Catégorie</a>
 </div>
 
 @endpush
@@ -86,7 +86,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+					<button type="submit" class="btn btn-success btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>
@@ -118,7 +118,7 @@
 						</div>
 
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+					<button type="submit" class="btn btn-success btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>

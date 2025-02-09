@@ -13,9 +13,9 @@
 		<li class="breadcrumb-item active">Ventes</li>
 	</ul>
 </div>
-@can('create-sales')
+@can('creer-ventes')
 <div class="col-sm-5 col">
-	<a href="#add_sales" data-toggle="modal" class="btn btn-primary float-right mt-2">Ajouter</a>
+	<a href="#add_sales" data-toggle="modal" class="btn btn-success float-right mt-2">Ajouter</a>
 </div>
 @endcan
 @endpush
@@ -48,12 +48,12 @@
 										<td>{{date_format(date_create($sale->created_at),"d M, Y")}}</td>
 										<td>
 											<div class="actions">
-												@can('update-sales')
+												@can('miseAjour-ventes')
 												<a data-id="{{$sale->id}}" data-product="{{$sale->product_id}}" data-quantity="{{$sale->quantity}}" class="btn btn-sm bg-success-light editbtn" href="javascript:void(0);">
 													<i class="fe fe-pencil"></i> Modifier
 												</a>
 												@endcan
-												@can('destroy-sales')
+												@can('supprimer-ventess')
 												<a data-id="{{$sale->id}}" href="javascript:void(0);" class="btn btn-sm bg-danger-light deletebtn" data-toggle="modal">
 													<i class="fe fe-trash"></i> Supprimer
 												</a>
@@ -111,7 +111,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+					<button type="submit" class="btn btn-success btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>
@@ -157,7 +157,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+					<button type="submit" class="btn btn-success btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>

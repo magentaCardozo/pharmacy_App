@@ -4,7 +4,7 @@
 	<!-- Logo -->
 	<div class="header-left">
 		<a href="{{route('dashboard')}}" class="logo">
-			<img src="@if(!empty(AppSettings::get('logo'))) {{asset('storage/'.AppSettings::get('logo'))}} @else{{asset('assets/img/logo.png')}} @endif" alt="Logo">
+			<img class="img-fluid image-border" src="@if(!empty(AppSettings::get('logo'))) {{asset('storage/'.AppSettings::get('logo'))}} @else{{asset('assets/img/logoNav.png')}} @endif" alt="Logo" width="70%">
 		</a>
 		<a href="{{route('dashboard')}}" class="logo logo-small">
 			<img src="{{asset('assets/img/logo-small.png')}}" alt="Logo" width="30" height="30">
@@ -84,12 +84,12 @@
 				</div>
 				
 				<a class="dropdown-item" href="{{route('profile')}}">Mon profil</a>
-				@can('view-settings')<a class="dropdown-item" href="{{route('settings')}}">Paramètre</a>@endcan
-				@can('backup-app')
-				<a class="dropdown-item" href="{{route('backup-app')}}">Sauvegarder l'Application</a>
+				@can('voir-parametres')<a class="dropdown-item" href="{{route('settings')}}">Paramètre</a>@endcan
+				@can('Sauvegarder-application')
+				<a class="dropdown-item" href="{{route('Sauvegarder-application')}}">Sauvegarder l'Application</a>
 				@endcan
-				@can('backup-db')
-				<a class="dropdown-item" href="{{route('backup-db')}}">Sauvegarder La Base de données</a>
+				@can('sauvegarder-BD')
+				<a class="dropdown-item" href="{{route('sauvegarder-BD')}}">Sauvegarder La Base de données</a>
 				@endcan
 				<a class="dropdown-item" href="{{route('logout')}}">Se Déconnecter</a>
 			</div>

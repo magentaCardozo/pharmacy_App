@@ -19,7 +19,7 @@
 		<input class="form-control" name="email" type="text" placeholder="Email">
 	</div>
 	<div class="form-group mb-0">
-		<button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+		<button class="btn btn-success btn-block" type="submit">Reset Password</button>
 	</div>
 </form>
 <!-- /Form -->

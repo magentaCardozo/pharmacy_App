@@ -188,7 +188,7 @@ class UserController extends Controller
     public function destroy(Request $request)
     {
         $user = User::find($request->id);
-        if($user->hasRole('super-admin')){
+        if($user->hasRole('administrateur')){
             $notification=array(
                 'message'=>"Le Super administrateur ne peut pas être supprimé",
                 'alert-type'=>'warning',

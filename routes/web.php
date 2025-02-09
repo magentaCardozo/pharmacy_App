@@ -107,8 +107,8 @@ Route::group(['middleware'=>['auth']],function (){
     Route::get('reports',[ReportController::class,'index'])->name('reports');
     Route::post('reports',[ReportController::class,'getData']);
 
-    Route::get('backup',[BackupController::class,'index'])->name('backup-app');
-    Route::get('backup-app',[BackupController::class,'database'])->name('backup-db');
+    Route::get('backup',[BackupController::class,'index'])->name('Sauvegarder-application');
+    Route::get('Sauvegarder-application',[BackupController::class,'database'])->name('sauvegarder-BD');
 });
 
 Route::get('/', function () {

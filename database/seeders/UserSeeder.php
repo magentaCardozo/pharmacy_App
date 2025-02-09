@@ -23,6 +23,6 @@ class UserSeeder extends Seeder
             'email' => "jonathancibangu7@gmail.com",
             'password' => Hash::make('than243'),
         ]);
-        $user->assignRole('super-admin');
+        $user->assignRole('administrateur');
     }
 }

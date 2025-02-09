@@ -37,7 +37,7 @@
 		<div class="profile-menu">
 			<ul class="nav nav-tabs nav-tabs-solid">
 				<li class="nav-item">
-					<a class="nav-link active" data-toggle="tab" href="#per_details_tab">A propos</a>
+					<a class="nav-link border-success bg-success active" data-toggle="tab" href="#per_details_tab">A propos</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" data-toggle="tab" href="#password_tab">Mot de passe</a>
@@ -106,7 +106,7 @@
 														<input class="form-control" name="email" type="text" value="{{auth()->user()->email}}" placeholder="Email">
 													</div>
 												</div>
-												@can('update-role')
+												@can('miseAjour-role')
 												<div class="col-12">
 													<div class="form-group">
 														<label>Rôle</label>
@@ -126,7 +126,7 @@
 												</div>
 
 											</div>
-											<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+											<button type="submit" class="btn btn-success btn-block">Enregistrer</button>
 										</form>
 									</div>
 								</div>
@@ -166,7 +166,7 @@
 										<label>Confirmer mot de passe</label>
 										<input type="password" name="password_confirmation" class="form-control">
 									</div>
-									<button class="btn btn-primary" type="submit">Enregistrer</button>
+									<button class="btn btn-success" type="submit">Enregistrer</button>
 								</form>
 							</div>
 						</div>

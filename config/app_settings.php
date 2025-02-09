@@ -40,7 +40,7 @@ return [
                     'hint' => 'La taille d\'image recommandée est  150px x 150px',
                     'rules' => 'image|max:500',
                     'disk' => 'public', // which disk you want to upload
-                    'path' => 'logos', // path on the disk,
+                    'path' => '/logos', // path on the disk,
                     'preview_class' => 'thumbnail',
                     'preview_style' => 'height:40px'
                 ]
@@ -52,7 +52,7 @@ return [
                     'hint' => 'La taille d\'image recommandée est  16px x 16px or 32px x 32px',
                     'rules' => 'image|max:500',
                     'disk' => 'public', // which disk you want to upload
-                    'path' => 'logos', // path on the disk,
+                    'path' => '/logos', // path on the disk,
                     'preview_class' => 'thumbnail',
                     'preview_style' => 'height:40px'
                 ],
@@ -107,7 +107,7 @@ return [
 
     // Submit button
     'submit_btn_text' => 'Enregistrer le paramètre',
-    'submit_success_message' => 'Settings has been saved.',
+    'submit_success_message' => 'Le paramètre a été enregistré.',
 
     // Remove any setting which declaration removed later from sections
     'remove_abandoned_settings' => false,

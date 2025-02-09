@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="#add_user" data-toggle="modal" class="btn btn-primary float-right mt-2">Ajouter un Utilisateur</a>
+	<a href="#add_user" data-toggle="modal" class="btn btn-success float-right mt-2">Ajouter un Utilisateur</a>
 </div>
 
 @endpush
@@ -52,7 +52,7 @@
 								<td>
 									{{$user->email}}
 								</td>
-								@can('update-role')
+								@can('miseAjour-role')
 								<td>
 									@foreach ($user->getRoleNames() as $role)
 									{{$role}}
@@ -142,7 +142,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+					<button type="submit" class="btn btn-success btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>
@@ -178,7 +178,7 @@
 								<input type="email" name="email" class="form-control edit_email" id="email">
 							</div>
 						</div>
-						@can('update-role')
+						@can('miseAjour-role')
 						<div class="col-12">
 							<div class="form-group">
 								<label>Role</label>
@@ -215,7 +215,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Enregister</button>
+					<button type="submit" class="btn btn-success btn-block">Enregister</button>
 				</form>
 			</div>
 		</div>

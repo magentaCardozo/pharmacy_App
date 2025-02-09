@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="#add_permission" data-toggle="modal" class="btn btn-primary float-right mt-2">Ajouter Permission</a>
+	<a href="#add_permission" data-toggle="modal" class="btn btn-success float-right mt-2">Ajouter Permission</a>
 </div>
 
 @endpush
@@ -45,12 +45,12 @@
 
 								<td class="text-center">
 									<div class="actions">
-										@can('update-permission')
+										@can('miseAjour-permission')
 										<a data-id="{{$permission->id}}" data-permission="{{$permission->name}}" class="btn btn-sm bg-success-light editbtn" data-toggle="modal" href="javascript:void(0)">
 											<i class="fe fe-pencil"></i> Modifier
 										</a>
 										@endcan
-										@can('destroy-permission')
+										@can('supprimer-permission')
 										<a data-id="{{$permission->id}}" data-toggle="modal" href="javascript:void(0)" class="btn btn-sm bg-danger-light deletebtn">
 											<i class="fe fe-trash"></i> Supprimer
 										</a>
@@ -88,7 +88,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+					<button type="submit" class="btn btn-success btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>
@@ -120,7 +120,7 @@
 						</div>
 
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Modifier</button>
+					<button type="submit" class="btn btn-success btn-block">Modifier</button>
 				</form>
 			</div>
 		</div>

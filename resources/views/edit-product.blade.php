@@ -75,7 +75,7 @@
 					</div>
 
 					<div class="submit-section">
-						<button class="btn btn-primary submit-btn" type="submit" name="form_submit" value="submit">Submit</button>
+						<button class="btn btn-success submit-btn" type="submit" name="form_submit" value="submit">Submit</button>
 					</div>
 				</form>
 			<!-- /Edit Medicine -->

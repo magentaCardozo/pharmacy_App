@@ -44,7 +44,7 @@ class PermissionController extends Controller
         ]);
         foreach (explode(',',$request->permission) as  $perm) {
             $permission = Permission::create(['name' => $perm]);
-            $permission->assignRole('super-admin');
+            $permission->assignRole('administrateur');
         }
         $notification = array(
             'message'=>"La permission a été créée avec succès!!",

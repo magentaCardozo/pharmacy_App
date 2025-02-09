@@ -14,7 +14,7 @@
 	</ul>
 </div>
 <div class="col-sm-5 col">
-	<a href="#generate_report" data-toggle="modal" class="btn btn-primary float-right mt-2">Générer Rapport</a>
+	<a href="#generate_report" data-toggle="modal" class="btn btn-success float-right mt-2">Générer Rapport</a>
 </div>
 @endpush
 
@@ -262,7 +262,7 @@
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+					<button type="submit" class="btn btn-success btn-block">Enregistrer</button>
 				</form>
 			</div>
 		</div>

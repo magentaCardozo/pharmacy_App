@@ -24,16 +24,16 @@ class RolesAndPermissionsSeeder extends Seeder
 
 
         $arrayOfPermissionNames = [
-          'view-sales', 'create-sales','destroy-sale','update-sales',
-          'view-reports','view-category','create-category','destroy-category','update-category',
-          'view-products','create-product','update-product','destroy-product',
-          'view-purchase','create-purchase','update-purchase','destroy-purchase',
-          'view-supplier','create-supplier','update-supplier','destroy-supplier',
-          'view-users','create-user','update-user','destroy-user',
-          'view-access-control',
-          'view-role','update-role','destroy-role','create-role',
-          'view-permission','create-permission','update-permission','destroy-permission',
-          'view-expired-products','view-outstock-products','backup-app','backup-db','view-settings',
+          'voir-ventes', 'creer-ventes','supprimer-ventes','miseAjour-ventes',
+          'voir-raports','voir-categorie','creer-categorie','supprimer-categorie','miseAjour-categorie',
+          'voir-produits','creer-produits','miseAjour-produits','supprimer-produits',
+          'voir-achats','creer-achats','miseAjour-achats','supprimer-achats',
+          'voir-fournisseur','creer-fournisseur','miseAjour-fournisseur','supprimer-fournisseur',
+          'voir-utilisateur','creer-utilisateur','miseAjour-utilisateur','supprimer-utilisateur',
+          'voir-acces-controle',
+          'voir-role','miseAjour-role','supprimer-role','creer-role',
+          'voir-permission','creer-permission','miseAjour-permission','supprimer-permission',
+          'voir-produits-expire','voir-produits-enRuptureStock','Sauvegarder-application','sauvegarder-BD','voir-parametres',
 
         ];
        $permissions = collect($arrayOfPermissionNames)->map(function ($permission) {
@@ -43,9 +43,9 @@ class RolesAndPermissionsSeeder extends Seeder
       Permission::insert($permissions->toArray());
 
         // create roles and assign permissions
-        $role = Role::create(['name' => 'sales-person'])
-         ->givePermissionTo(['view-sales', 'view-reports','create-sales']);
-        $role = Role::create(['name' => 'super-admin']);
+        $role = Role::create(['name' => 'Pharmacien'])
+         ->givePermissionTo(['voir-ventes', 'voir-raports','creer-ventes']);
+        $role = Role::create(['name' => 'administrateur']);
         $role->givePermissionTo(Permission::all());
     }
 }
